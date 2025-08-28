@@ -1,0 +1,5 @@
+import React from 'react';
+export const Tabs = ({ value, onValueChange, children, className }) => <div className={className}>{React.Children.map(children, child => React.cloneElement(child, { activeTab: value, onValueChange }))}</div>;
+export const TabsList = ({ children, className, activeTab, onValueChange }) => <div className={`flex items-center justify-center p-1 bg-gray-800 rounded-lg ${className}`}>{React.Children.map(children, child => React.cloneElement(child, { activeTab, onValueChange }))}</div>;
+export const TabsTrigger = ({ value, children, className, activeTab, onValueChange }) => <button onClick={() => onValueChange(value)} className={`flex-1 px-4 py-2 text-sm font-medium rounded-md transition-colors ${activeTab === value ? 'bg-gray-900 text-white shadow-inner' : 'text-gray-400 hover:text-white'} ${className}`}>{children}</button>;
+export const TabsContent = ({ value, children, className, activeTab }) => <div className={`${activeTab === value ? 'block' : 'hidden'} ${className}`}>{children}</div>;
