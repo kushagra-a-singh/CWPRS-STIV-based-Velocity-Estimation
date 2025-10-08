@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #111827; /* Dark theme background */
+  color: #d1d5db; /* Default text color */
+}
+
+.velocity-indicator {
+  background: linear-gradient(45deg, #06b6d4, #22d3ee);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.7), 0 0 25px rgba(6, 182, 212, 0.5);
+}
+
+.velocity-indicator-bg {
+  background: #06b6d4;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+}
+
+.metric-value {
+  color: #22d3ee;
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.7);
+}
+
+.slider-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #111827;
+  border: 2px solid #22d3ee;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
+  margin-top: -8px; 
+}
+
+.slider-thumb::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #111827;
+  border: 2px solid #22d3ee;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
+  border: none;
+}
