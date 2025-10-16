@@ -1,3 +1,10 @@
 *.log
+<<<<<<< Updated upstream
 node_modules
 pyorc_env/
+=======
+
+pyorc_env/
+Test/
+
+>>>>>>> Stashed changes
